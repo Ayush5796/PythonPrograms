@@ -19,8 +19,9 @@ class Notebook:
     def _find_note(self, note_id):
         
         for note in self.notes:
-            if note.id == note_id:
+            if str(note.id) == str(note_id):
                 return note
+        return None
     
 
     def modify_memo(self,note_id,memo):
